@@ -1,12 +1,12 @@
 import './App.css';
-import Header from './components/Header';
-import Input from './components/Input';
-import {BrowserRouter as Route, Routes} from 'react-dom'
+// import Header from './components/Header';
+// import Input from './components/Input';
+// import {BrowserRouter as Route, Routes} from 'react-dom'
 
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Home />
         <Routes>
           <Route path="/" component={<NewGame />} />
@@ -14,7 +14,7 @@ function App() {
           <Route path="/game" component={<Game /> }/>
           <Route path="/result" component={ <Result /> }/>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 }
