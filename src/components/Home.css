@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  position: relative;
+  /* background-color: #141C6D; */
+  height: 80px;
+}
+
+.header_img {
+  width: 100%;
+}
+
+.tictactoe_img {
+  position: absolute;
+  margin-top: 20px;
+  right: 92%;
+}
+
+.xoxo_img {
+  position: absolute;
+  margin-top: 35px;
+  right: 85%;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+}
+
+.bg_color {
+  left: 0px;
+  width: 100%;
+  height: 730px;
+  object-fit: cover;
+  background: linear-gradient(
+    180deg,
+    rgb(19 2 233 / 84%) 0%,
+    rgb(227 10 190 / 86%) 100%
+  );
+}
+
+.galaxy2_img {
+  position: absolute;
+  top: 8px;
+  left: 87%;
+  width: 13%;
+}
+
+.galaxy1_img {
+  position: absolute;
+  bottom: 5px;
+  right: 80%;
+  width: 20%;
+}
+
+.form {
+  position: absolute;
+  width: 593px;
+  height: 630px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background: linear-gradient(180deg, #211759, #4033a5);
+  border-radius: 32px;
+  /* transform: rotate(180deg); */
+}
+
+.game-btn {
+  position: absolute;
+  width: 481px;
+  height: 70px;
+  left: 60px;
+  top: 330px;
+  background: #7edbfb;
+  box-shadow: 0px 8px 12px -2px #141c6d;
+  border-radius: 10px;
+
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 45px;
+  color: #ffffff;
+}
+
+.multi-btn {
+  position: absolute;
+  width: 481px;
+  height: 70px;
+  left: 60px;
+  top: 430px;
+
+  background: #ea53a3;
+  box-shadow: 0px 8px 12px -2px #141c6d;
+  border-radius: 10px;
+
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 45px;
+  color: #ffffff;
+}
+
+.set-btn {
+  position: absolute;
+  width: 481px;
+  height: 70px;
+  left: 60px;
+  top: 530px;
+
+  background: #798ff6;
+  box-shadow: 0px 8px 12px -2px #141c6d;
+  border-radius: 10px;
+
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 45px;
+  color: #ffffff;
+}
+
+.speaker {
+  position: absolute;
+  width: 47px;
+  height: 47px;
+  left: 500px;
+  top: 20px;
+}
+
+.crush_img {
+  position: absolute;
+  width: 182px;
+  height: 182px;
+  left: 200px;
+  top: 80px;
+}
