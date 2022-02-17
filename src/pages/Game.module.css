@@ -1,4 +1,4 @@
-.content {
+.main {
   position: absolute;
   width: 593px;
   height: 714px;
@@ -18,36 +18,7 @@
   background: #614ebb;
   border-radius: 20px;
 }
-.table {
-  position: absolute;
-  width: 140px;
-  height: 140px;
-  left: 24px;
-  top: 24px;
 
-  background: #2f2478;
-  border-radius: 20px;
-}
-
-/* .main {
-  position: absolute;
-  width: 593px;
-  height: 714px;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  background: linear-gradient(180deg, #211759, #4033a5);
-  border-radius: 32px;
-}
-.container {
-  position: absolute;
-  width: 478px;
-  height: 482px;
-  left: 58px;
-  top: 164px;
-  background: #614ebb;
-  border-radius: 20px;
-}
 .td {
   width: 140px;
   height: 140px;
@@ -87,10 +58,8 @@ button {
 }
 .winnerContent {
   text-align: center;
- 
   font-size: 34px;
   background: #a4a52a;
   border-radius: 50%;
   color: aliceblue;
 }
- */
