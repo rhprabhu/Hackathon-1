@@ -1,4 +1,10 @@
 import React from "react";
+
+
+const NewGame = () => {
+  return <div>NewGame</div>;
+};
+
 import "./NewGame.css";
 
 function NewGame() {
@@ -15,5 +21,6 @@ function NewGame() {
     </div>
   );
 }
+
 
 export default NewGame;
