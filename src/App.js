@@ -14,7 +14,8 @@ function App() {
       {/* <img src={process.env.PUBLIC_URL + "/images/logo.svg"} /> */}
       {/* <Home /> */}
       {/* <PlayerDetails /> */}
-      <NewGame />
+      {/* <NewGame /> */}
+      <Result />
       {/* <BrowserRouter>
         <Routes>
           <Route path="/" component={<NewGame />} />
