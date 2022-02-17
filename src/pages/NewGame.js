@@ -1,7 +1,7 @@
 import React from "react";
 import "./NewGame.css";
 
-function Home() {
+function NewGame() {
   return (
     <div className="form">
       <img
@@ -16,4 +16,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default NewGame;
