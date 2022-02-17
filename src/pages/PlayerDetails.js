@@ -20,3 +20,4 @@ function PlayerDetails() {
 }
 
 export default PlayerDetails
+

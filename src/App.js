@@ -1,12 +1,16 @@
 import "./App.css";
-import { BrowserRouter as Route, Routes } from "react-dom";
+
+import Home from "./components/Home";
 import NewGame from "./pages/NewGame";
+import PlayerDetails from "./pages/PlayerDetails";
 import Game from "./pages/Game";
 import Result from "./pages/Result";
-import PlayerDetails from "./pages/PlayerDetails";
-import Home from "./components/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+
 
 // import logo from "./images/logo.svg";
+
 
 function App() {
   return (
@@ -16,14 +20,15 @@ function App() {
       {/* <PlayerDetails /> */}
       {/* <NewGame /> */}
       <Result />
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
-          <Route path="/" component={<NewGame />} />
-          <Route path="/details" component={<PlayerDetails />} />
-          <Route path="/game" component={<Game />} />
-          <Route path="/result" component={<Result />} />
+
+          <Route path="/" element={<NewGame />} exact />
+          <Route path="details" element={<PlayerDetails />} exact />
+          <Route path="game" element={<Game />} exact />
+          <Route path="result" element={<Result />} exact />
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
     </div>
   );
 }
