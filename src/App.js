@@ -1,7 +1,10 @@
-import './App.css';
-import Header from './components/Header';
-import Input from './components/Input';
-import {BrowserRouter as Route, Routes} from 'react-dom'
+import "./App.css";
+import Home from "./components/Home";
+import NewGame from "./pages/NewGame";
+import PlayerDetails from "./pages/PlayerDetails";
+import Game from "./pages/Game";
+import Result from "./pages/Result";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -9,10 +12,10 @@ function App() {
       <BrowserRouter>
         <Home />
         <Routes>
-          <Route path="/" component={<NewGame />} />
-          <Route path="/details" component={<PlayerDetails />} />
-          <Route path="/game" component={<Game /> }/>
-          <Route path="/result" component={ <Result /> }/>
+          <Route path="/" element={<NewGame />} exact />
+          <Route path="details" element={<PlayerDetails />} exact />
+          <Route path="game" element={<Game />} exact />
+          <Route path="result" element={<Result />} exact />
         </Routes>
       </BrowserRouter>
     </div>
