@@ -40,7 +40,7 @@ color: #FFFFFF;
 .line{
     position: absolute;
     left: 50px;
-    top: 98px;
+    top: 165px;
     width: 225px;
 }
 
@@ -151,9 +151,9 @@ border: 1px solid #FFFFFF;
 
 .btn-go{
     position: absolute;
-width: 481px;
+width: 502px;
 height: 70px;
-left: 60px;
+left: 50px;
 top: 580px;
 
 background: #EA53A3;
