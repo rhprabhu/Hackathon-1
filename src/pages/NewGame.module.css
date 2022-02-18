@@ -13,7 +13,7 @@ border-radius: 32px;
 /* transform: rotate(180deg); */
 }
 
-.game-btn{
+.gamebtn{
     position: absolute;
 width: 481px;
 height: 70px;
@@ -31,7 +31,7 @@ line-height: 45px;
 color: #FFFFFF;
 }
 
-.multi-btn{
+.multibtn{
     position: absolute;
 width: 481px;
 height: 70px;
@@ -50,7 +50,7 @@ line-height: 45px;
 color: #FFFFFF;
 }
 
-.set-btn{
+.setbtn{
 position: absolute;
 width: 481px;
 height: 70px;
@@ -82,5 +82,5 @@ top: 80px;
 width: 47px;
 height: 47px;
 left: 500px;
-top: 20px;
+top: 60px;
 }

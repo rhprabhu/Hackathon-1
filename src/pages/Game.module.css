@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
 .main {
   position: absolute;
   width: 593px;
@@ -36,28 +38,45 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: Prosto One;
+  font-family: "Prosto One", sans-serif;
   margin-top: 20px;
   margin-left: 10px;
 }
 .gameHeading span {
   color: aliceblue;
   background-color: transparent;
-  border: 1px solid #ea53a3;
+  border: 2px solid white;
   font-family: Prosto One;
   border-radius: 8px;
   padding: 10px;
   font-size: 25px;
+  font-weight: 200;
+  background-color: #702963;
 }
-.handleButton {
+.handleButton1 {
   color: aliceblue;
   width: 100px;
-  border: 1px solid #ea53a3;
-  background-color: #ea53a3;
-  font-family: Prosto One;
+  border: 1px solid white;
+  background-color: #c71585;
+  font-family: "Prosto One", sans-serif;
   border-radius: 8px;
   padding: 10px;
-  margin-right: 20px;
+  margin-left: 200px;
+  font-size: 25px;
+  font-weight: 200;
+}
+
+.handleButton2 {
+  color: aliceblue;
+  width: 100px;
+  border: 1px solid white;
+  background-color: #c71585;
+  font-family: "Prosto One", sans-serif;
+  border-radius: 8px;
+  padding: 10px;
+  margin-right: 30px;
+  font-size: 25px;
+  font-weight: 200;
 }
 .playersInfo {
   display: flex;
@@ -73,21 +92,27 @@
 .winnerContent {
   text-align: center;
   font-size: 34px;
-  background: #a4a52a;
+  background: #EE82EE;
   border-radius: 50%;
-  color: aliceblue;
+  color: rgb(107, 91, 3);
+  font-family:  'Prosto One', sans-serif;
+  padding: 15px;
 }
 .X {
-  font-size: 50px;
+  font-size: 80px;
   text-align: center;
   margin-left: 28%;
-  color: green;
+  color: #64CC7D;
+  font-weight: bold;
+  line-height: 70px;
 }
 .O {
-  font-size: 50px;
+  font-size: 80px;
   text-align: center;
   margin-left: 28%;
-  color: #805800;
+  color: #F8D155;
+  font-weight: bold;
+  line-height: 70px;
 }
 
 .playIcons {
@@ -95,26 +120,37 @@
 }
 
 .XButtton {
-  color: black;
+ color: #64CC7D;
   font-size: 15px;
-  font-weight: 500;
+
   border: 1px solid #ea53a3;
-  font-family: Prosto One;
+   font-family: 'Prosto One', sans-serif;
   border-radius: 8px;
   padding: 10px;
   margin-right: 75px;
-  color: aliceblue;
+  color: #F8D155;
   background-color: transparent;
+   border: 1px solid white;
 }
 .OButtton {
   margin-right: 75px;
   color: aliceblue;
   background-color: transparent;
-  color: #805800;
-  font-size: 15px;
-  font-weight: 500;
+  color: #F8D155;
+  font-size: 18px;
+
   border: 1px solid #ea53a3;
-  font-family: Prosto One;
+  font-family: 'Prosto One', sans-serif;
   border-radius: 8px;
   padding: 10px;
+   border: 1px solid white;
+}
+
+.Normal {
+ background-color: #F8D155;
+  font-size: 15px;
+  font-weight: 500;
+   border-radius: 8px;
+  padding: 10px;
+
 }

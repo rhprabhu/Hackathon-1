@@ -1,58 +1,43 @@
 import React, { useState } from 'react'
-import "./Result.css";
-import { useNavigate } from 'react-router-dom'
+import style from "./Result.module.css";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function Result() {
-  const names = [
-    {
-      level: "1",
-      winner: "niraj",
-    },
-    {
-      level: "2",
-      winner: "sachin",
-    },
-    {
-      level: "3",
-      winner: "niraj",
-    },
-    {
-      level: "4",
-      winner: "sachin",
-    },
-    {
-      level: "5",
-      winner: "niraj",
-    },
-  ];
+  //useLocation hook returns a location object
+  const location = useLocation();
+  console.log(location.state);
+  //storing result 
+  const result = location.state;
+  console.log(result);
 
-
-  const [players, setPlayers] = useState(names);
-
-  names.map((name) => {<li key={name.level}>{name.name}</li>;})
-  console.log(names);
-
-//   const onHandle = () => {
-//   names.map((name) => {
-//     <li key={name.level}>{name.name}</li>;
-//   });
-// }
+  //using navigate to redirect the page and setting path
   const navigate = useNavigate();
   return (
-    <div className="form">
-      <img className="speaker" src={process.env.PUBLIC_URL + "/images/advertising 1.svg"}/>
-      <div className="form1">
-        <img className="win" src={process.env.PUBLIC_URL + "/images/win1.svg"}
+    <div className={style.form}>
+      <img
+        className={style.speaker}
+        src={process.env.PUBLIC_URL + "/images/advertising 1.svg"}
+      />
+      <div className={style.form1}>
+        <img
+          className={style.win}
+          src={process.env.PUBLIC_URL + "/images/win1.svg"}
         />
       </div>
-{players.map((name) =>(
-    <>  <div className="rectangle">
-          <span className="level">{name.level}</span>
-            <span className="player">{name.winner}</span> </div></>
-         )) }
+      {/* map is used to map the level and winnners */}
+      {result.map((res) => (
+        <>
+          {" "}
+          <div className={style.rectangle}>
+            <span className={style.level}>Level&nbsp;{res.level}</span>
+            <span className={style.player}>{res.winner}</span>{" "}
+          </div>
+        </>
+      ))}
 
-     
-      <button className="play-btn" onClick={()=>navigate('/')}>Play again</button>
+      <button className={style.playbtn} onClick={() => navigate("/")}>
+        Play again
+      </button>
     </div>
   );
 }

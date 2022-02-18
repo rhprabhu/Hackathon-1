@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./Game.module.css";
 import { GrClose } from "react-icons/gr";
 import { BsCircle } from "react-icons/bs";
@@ -10,8 +10,8 @@ const Game = () => {
   const [winner, setWinner] = useState();
   const [level, setLevel] = useState(1);
   const [users, setUsers] = useState({
-    firstPlayer: "niraj",
-    secondPlayer: "sachin",
+    firstPlayer: "Niraj",
+    secondPlayer: "Sachin",
   });
   const navigate = useNavigate();
 
@@ -54,68 +54,79 @@ const Game = () => {
     }
   };
 
-  const handleClick = (num) => {
-    if (cells[num] !== "") {
-      alert("already clicked");
-      return;
-    }
+  useEffect(() => {
+    result = [];
+  }, []);
 
-    if (turn === "x") {
-      squares[num] = "x";
-      setTurn("o");
-    } else {
-      squares[num] = "o";
-      setTurn("x");
+  const findresult = () => {
+     setcount(0);
+     if (level !== 5) {
+       setLevel((prev) => prev + 1);
+       result = [
+         ...result,
+         {
+           level: level,
+           winner:
+             winner && count !== 10
+               ? winner == "x"
+                 ? users.firstPlayer
+                 : users.secondPlayer
+               : "draw",
+         },
+       ];
+       console.log(count);
+       setcount(0);
+     } else {
+       setLevel((prev) => prev + 1);
+       result = [
+         ...result,
+         {
+           level: level,
+           winner:
+             winner && count !== 10
+               ? winner == "x"
+                 ? users.firstPlayer
+                 : users.secondPlayer
+               : "draw",
+         },
+       ];
+       console.log(count);
+       setcount(0);
+       navigate("/result", { state: result });
+     }
+
+     console.log(result);
+  }
+
+  const handleClick = (num) => {
+    if (!winner) {
+      if (cells[num] !== "") {
+        alert("already clicked");
+        return;
+      }
+
+      if (turn === "x") {
+        squares[num] = "x";
+        setTurn("o");
+      } else {
+        squares[num] = "o";
+        setTurn("x");
+      }
+      setcount((prev) => prev + 1);
+      checkForWinner(squares);
+      setCells(squares);
     }
-    setcount((prev) => prev + 1);
-    checkForWinner(squares);
-    setCells(squares);
   };
 
   const handleNext = () => {
     setWinner(null);
     setCells(Array(9).fill(""));
     setTurn("x");
-    setcount(0);
-    if (level !== 5) {
-      setLevel((prev) => prev + 1);
-      result = [
-        ...result,
-        {
-          level: level,
-          winner:
-            winner && count !== 10
-              ? winner == "x"
-                ? users.firstPlayer
-                : users.secondPlayer
-              : "draw",
-        },
-      ];
-      console.log(count);
-      setcount(0);
-    } else {
-      setLevel((prev) => prev + 1);
-      result = [
-        ...result,
-        {
-          level: level,
-          winner:
-            winner && count !== 10
-              ? winner == "x"
-                ? users.firstPlayer
-                : users.secondPlayer
-              : "draw",
-        },
-      ];
-      console.log(count);
-      setcount(0);
-      navigate("/result", { state: result });
-    }
-
-    console.log(result);
+    findresult();
+   
   };
   const handleEnd = () => {
-    handleNext();
+    winner&&findresult();
     navigate("/result", { state: result });
   };
 
@@ -139,22 +150,22 @@ const Game = () => {
       <div className={style.gameHeading}>
         <span>Level {level}</span>
         <button
-          className={style.handleButton}
+          className={style.handleButton1}
           onClick={handleNext}
           disabled={!winner && count !== 9}
         >
           NEXT
         </button>
-        <button className={style.handleButton} onClick={handleEnd}>
+        <button className={style.handleButton2} onClick={handleEnd}>
           END
         </button>
       </div>
       <div className={style.playersInfo}>
-        <button className={style.XButtton}>
+        <button className={turn === "x" ? style.XButtton : style.Normal}>
           {users.firstPlayer}
           <GrClose className={style.playIcons} />
         </button>
-        <button className={style.OButtton}>
+        <button className={turn === "o" ? style.OButtton : style.Normal}>
           {users.secondPlayer}
           <BsCircle className={style.playIcons} />
         </button>
