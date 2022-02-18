@@ -2,7 +2,7 @@
 
 .main {
   position: absolute;
-  width: 593px;
+  width: 645px;
   height: 714px;
   transform: translate(-50%, -50%);
   top: 50%;
@@ -120,20 +120,19 @@
 }
 
 .XButtton {
- color: #64CC7D;
-  font-size: 15px;
+  color: aliceblue;
+  background-color: transparent;
+  color: #F8D155;
+  font-size: 18px;
 
   border: 1px solid #ea53a3;
-   font-family: 'Prosto One', sans-serif;
+  font-family: 'Prosto One', sans-serif;
   border-radius: 8px;
-  padding: 10px;
-  margin-right: 75px;
-  color: #F8D155;
-  background-color: transparent;
+  padding: 8px;
    border: 1px solid white;
 }
 .OButtton {
-  margin-right: 75px;
+ 
   color: aliceblue;
   background-color: transparent;
   color: #F8D155;

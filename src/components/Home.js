@@ -8,7 +8,7 @@ export default function Home (){
     return (
       <>
         <div className="header">
-          <img  className="header_img"  src={process.env.PUBLIC_URL + "/images/Rectangle 1.svg"}  />
+          <img  className="header_img" />
           <img  className="tictactoe_img"  src={process.env.PUBLIC_URL + "/images/tic-tac-toe 1.svg"} />
           <img  className="xoxo_img"  src={process.env.PUBLIC_URL + "/images/XOXO.svg"} />
         </div>

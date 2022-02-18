@@ -2,13 +2,18 @@ import React, { useEffect, useState } from "react";
 import style from "./Game.module.css";
 import { GrClose } from "react-icons/gr";
 import { BsCircle } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+
 let result = [];
 const Game = () => {
   const [turn, setTurn] = useState("x");
   const [cells, setCells] = useState(Array(9).fill(""));
   const [winner, setWinner] = useState();
   const [level, setLevel] = useState(1);
+  const location = useLocation();
+  const firstPlayer = location.state.firstName;
+  const secondPlayer = location.state.secondName;
+  console.log(location.state.firstName);
   const [users, setUsers] = useState({
     firstPlayer: "Niraj",
     secondPlayer: "Sachin",
@@ -59,44 +64,44 @@ const Game = () => {
   }, []);
 
   const findresult = () => {
-     setcount(0);
-     if (level !== 5) {
-       setLevel((prev) => prev + 1);
-       result = [
-         ...result,
-         {
-           level: level,
-           winner:
-             winner && count !== 10
-               ? winner == "x"
-                 ? users.firstPlayer
-                 : users.secondPlayer
-               : "draw",
-         },
-       ];
-       console.log(count);
-       setcount(0);
-     } else {
-       setLevel((prev) => prev + 1);
-       result = [
-         ...result,
-         {
-           level: level,
-           winner:
-             winner && count !== 10
-               ? winner == "x"
-                 ? users.firstPlayer
-                 : users.secondPlayer
-               : "draw",
-         },
-       ];
-       console.log(count);
-       setcount(0);
-       navigate("/result", { state: result });
-     }
+    setcount(0);
+    if (level !== 5) {
+      setLevel((prev) => prev + 1);
+      result = [
+        ...result,
+        {
+          level: level,
+          winner:
+            winner && count !== 10
+              ? winner == "x"
+                ? firstPlayer
+                : secondPlayer
+              : "draw",
+        },
+      ];
+      console.log(count);
+      setcount(0);
+    } else {
+      setLevel((prev) => prev + 1);
+      result = [
+        ...result,
+        {
+          level: level,
+          winner:
+            winner && count !== 10
+              ? winner == "x"
+                ? firstPlayer
+                : secondPlayer
+              : "draw",
+        },
+      ];
+      console.log(count);
+      setcount(0);
+      navigate("/result", { state: result });
+    }
 
-     console.log(result);
-  }
+    console.log(result);
+  };
 
   const handleClick = (num) => {
     if (!winner) {
@@ -123,10 +128,9 @@ const Game = () => {
     setCells(Array(9).fill(""));
     setTurn("x");
     findresult();
-   
   };
   const handleEnd = () => {
-    winner&&findresult();
+    winner && findresult();
     navigate("/result", { state: result });
   };
 
@@ -162,11 +166,11 @@ const Game = () => {
       </div>
       <div className={style.playersInfo}>
         <button className={turn === "x" ? style.XButtton : style.Normal}>
-          {users.firstPlayer}
+          {firstPlayer}
           <GrClose className={style.playIcons} />
         </button>
         <button className={turn === "o" ? style.OButtton : style.Normal}>
-          {users.secondPlayer}
+          {secondPlayer}
           <BsCircle className={style.playIcons} />
         </button>
       </div>
@@ -192,10 +196,7 @@ const Game = () => {
         </table>
         {winner && (
           <div className={style.winnerContent}>
-            <p>
-              {winner == "x" ? users.firstPlayer : users.secondPlayer} is the
-              winner!
-            </p>
+            <p>{winner == "x" ? firstPlayer : secondPlayer} is the winner!</p>
           </div>
         )}
         {!winner && count === 9 ? (
