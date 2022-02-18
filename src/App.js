@@ -1,5 +1,3 @@
-import "./App.css";
-
 import Home from "./components/Home";
 import NewGame from "./pages/NewGame";
 import PlayerDetails from "./pages/PlayerDetails";
@@ -8,13 +6,17 @@ import Result from "./pages/Result";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // import logo from "./images/logo.svg";
-
 function App() {
   return (
     <div>
+
+      {/* <BrowserRouter>
+        <Home />
+
       {/* <img src={process.env.PUBLIC_URL + "/images/logo.svg"} /> */}
       {/* <Home /> */}
       {/* <PlayerDetails /> */}
+
 
       <BrowserRouter>
         <Home />
