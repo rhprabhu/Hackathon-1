@@ -7,8 +7,7 @@ function NewGame() {
   return (
     <div className="form">
       <img
-        className="speaker"
-        src={process.env.PUBLIC_URL + "/images/advertising 1.svg"}
+        className="speaker" src={process.env.PUBLIC_URL + "/images/advertising 1.svg"}
       />
       <img className="img1" src={process.env.PUBLIC_URL + "/images/crush 1.svg"} />
       <button className="game-btn" onClick={()=>navigate('/details')}>New Game</button>

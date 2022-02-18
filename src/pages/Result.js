@@ -26,6 +26,7 @@ function Result() {
     },
   ];
 
+
   const [players, setPlayers] = useState(names);
 
   names.map((name) => {<li key={name.level}>{name.name}</li>;})
@@ -39,8 +40,7 @@ function Result() {
   const navigate = useNavigate();
   return (
     <div className="form">
-      <img className="speaker" src={process.env.PUBLIC_URL + "/images/advertising 1.svg"}
-      />
+      <img className="speaker" src={process.env.PUBLIC_URL + "/images/advertising 1.svg"}/>
       <div className="form1">
         <img className="win" src={process.env.PUBLIC_URL + "/images/win1.svg"}
         />
