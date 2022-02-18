@@ -1,0 +1,120 @@
+.main {
+  position: absolute;
+  width: 593px;
+  height: 714px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background: linear-gradient(180deg, #211759, #4033a5);
+  border-radius: 32px;
+}
+.container {
+  position: absolute;
+  width: 478px;
+  height: 482px;
+  left: 58px;
+  top: 164px;
+
+  background: #614ebb;
+  border-radius: 20px;
+}
+
+.td {
+  width: 140px;
+  height: 140px;
+  left: 24px;
+  top: 24px;
+  background: #2f2478;
+  border-radius: 20px;
+}
+.table {
+  margin-top: 25px;
+  margin-left: 25px;
+}
+.gameHeading {
+  color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Prosto One;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.gameHeading span {
+  color: aliceblue;
+  background-color: transparent;
+  border: 1px solid #ea53a3;
+  font-family: Prosto One;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 25px;
+}
+.handleButton {
+  color: aliceblue;
+  width: 100px;
+  border: 1px solid #ea53a3;
+  background-color: #ea53a3;
+  font-family: Prosto One;
+  border-radius: 8px;
+  padding: 10px;
+  margin-right: 20px;
+}
+.playersInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 40px 0 0 10px;
+  align-items: center;
+  color: aliceblue;
+  float: left;
+  text-align: center;
+}
+
+.winnerContent {
+  text-align: center;
+  font-size: 34px;
+  background: #a4a52a;
+  border-radius: 50%;
+  color: aliceblue;
+}
+.X {
+  font-size: 50px;
+  text-align: center;
+  margin-left: 28%;
+  color: green;
+}
+.O {
+  font-size: 50px;
+  text-align: center;
+  margin-left: 28%;
+  color: #805800;
+}
+
+.playIcons {
+  margin-left: 30px;
+}
+
+.XButtton {
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid #ea53a3;
+  font-family: Prosto One;
+  border-radius: 8px;
+  padding: 10px;
+  margin-right: 75px;
+  color: aliceblue;
+  background-color: transparent;
+}
+.OButtton {
+  margin-right: 75px;
+  color: aliceblue;
+  background-color: transparent;
+  color: #805800;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid #ea53a3;
+  font-family: Prosto One;
+  border-radius: 8px;
+  padding: 10px;
+}
