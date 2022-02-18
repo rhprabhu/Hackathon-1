@@ -34,32 +34,87 @@
 .gameHeading {
   color: aliceblue;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   font-family: Prosto One;
+  margin-top: 20px;
+  margin-left: 10px;
 }
-.gameHeading span,
-button {
-  margin-right: 75px;
+.gameHeading span {
   color: aliceblue;
   background-color: transparent;
   border: 1px solid #ea53a3;
   font-family: Prosto One;
   border-radius: 8px;
   padding: 10px;
+  font-size: 25px;
+}
+.handleButton {
+  color: aliceblue;
+  width: 100px;
+  border: 1px solid #ea53a3;
+  background-color: #ea53a3;
+  font-family: Prosto One;
+  border-radius: 8px;
+  padding: 10px;
+  margin-right: 20px;
 }
 .playersInfo {
-  float: left;
   display: flex;
   flex-direction: row;
-  margin-top: 50px;
+  justify-content: center;
+  margin: 40px 0 0 10px;
+  align-items: center;
+  color: aliceblue;
+  float: left;
+  text-align: center;
 }
-.playersInfo button {
-  margin: 15px;
-}
+
 .winnerContent {
   text-align: center;
   font-size: 34px;
   background: #a4a52a;
   border-radius: 50%;
   color: aliceblue;
+}
+.X {
+  font-size: 50px;
+  text-align: center;
+  margin-left: 28%;
+  color: green;
+}
+.O {
+  font-size: 50px;
+  text-align: center;
+  margin-left: 28%;
+  color: #805800;
+}
+
+.playIcons {
+  margin-left: 30px;
+}
+
+.XButtton {
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid #ea53a3;
+  font-family: Prosto One;
+  border-radius: 8px;
+  padding: 10px;
+  margin-right: 75px;
+  color: aliceblue;
+  background-color: transparent;
+}
+.OButtton {
+  margin-right: 75px;
+  color: aliceblue;
+  background-color: transparent;
+  color: #805800;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid #ea53a3;
+  font-family: Prosto One;
+  border-radius: 8px;
+  padding: 10px;
 }
