@@ -128,7 +128,7 @@ const Game = () => {
     findresult();
   };
   const handleEnd = () => {
-    winner && findresult();
+   ( winner||count==9) && findresult();
     navigate("/result", { state: result });
   };
 
