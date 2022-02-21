@@ -99,8 +99,6 @@ const Game = () => {
       setcount(0);
       navigate("/result", { state: result });
     }
-
-    console.log(result);
   };
 
   const handleClick = (num) => {
